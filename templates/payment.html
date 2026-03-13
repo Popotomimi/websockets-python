@@ -76,6 +76,10 @@
       socket.on("connect", function () {
         console.log("Connected to the server");
       });
+      socket.on("payment_confirmed={{ payment_id }}", function () {
+        console.log("Payment confirmed");
+        location.reload();
+      });
     </script>
   </body>
 </html>
